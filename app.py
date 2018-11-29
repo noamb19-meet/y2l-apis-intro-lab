@@ -20,14 +20,18 @@ def movies():
                     "image_url": "https://ksassets.timeincuk.net/wp/uploads/sites/55/2018/02/KXC1W2-920x584.jpg"
                     }
                     """
-    return render_template('movie.html', movie={})
+    parsed_json = json.loads(json_string)
+    
+
+
+    return render_template('movie.html',movie=parsed_json)
 
 
 @app.route('/tvshows')
 def tv_shows():
     json_string = """
     [{
-    "url":"http://www.tvmaze.com/shows/2705/narcos",
+    "url":"ht Pull request   Compare This branch is even with meet-projects:master.tp://www.tvmaze.com/shows/2705/narcos",
     "name":"Narcos",
     "language":"English",
     "genres":[  
